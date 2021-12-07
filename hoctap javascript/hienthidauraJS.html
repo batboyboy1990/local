@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1 hien thi ket qua dau ra</p>
+    <p>2 hien thi ket ID ra innerHTML</p>
+    <p>3 hien thi ket documentwrite</p>
+    <div id="tinnhanDiv"></div>
+    <button type="button" onclick="myButtion0()";>alert</button>
+    <button type="button" onclick="myButtion1()";>inner-html</button>
+    <button type="button" onclick="myButtion2()";>documentwrite</button>
+<script>
+    function myButtion0(){
+        alert('day la alet')
+    }
+    function myButtion1(){
+       
+       document.getElementById("tinnhanDiv").innerHTML="day la innerHTML"
+    
+    }
+    function myButtion2(){
+
+        document.write("day la docment write")
+    }
+</script>
+</body>
+</html>
