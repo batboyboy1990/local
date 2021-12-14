@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>may tinh don gian</title>
+</head>
+<body>
+  <p> May tinh don gian </p>
+  <table>
+    <tr>
+          <td>
+   
+    <tr>
+      <td>
+        <input type="number" id="giatri1">
+      </td>
+      <td>
+        <input type="number" id="giatri2">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="button" value="cong+" onclick="dauCong()"></input>
+        <input type="button" value="tru-"  onclick="dauTru()"></input>
+        <input type="button" value="nhanx" onclick="dauNhan()"></input>
+        <input type="button" value="chia:" onclick="dauChia()"></input>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p id="ketqua">ketqua</p>
+      </td>
+    </tr>
+  </table>
+<script>
+
+
+  function dauCong() {
+    const giatri1 = parseInt(document.getElementById('giatri1').value)
+    const giatri2 = parseInt(document.getElementById('giatri2').value)
+    let ketqua = giatri1 + giatri2;
+    document.getElementById('ketqua').innerHTML = ketqua;
+  }
+  function dauTru() {
+    const giatri1 = parseInt(document.getElementById('giatri1').value)
+    const giatri2 = parseInt(document.getElementById('giatri2').value)
+    let ketqua = giatri1 - giatri2;
+    document.getElementById('ketqua').innerHTML = ketqua;
+  }
+  function dauNhan() {
+    const giatri1 = parseInt(document.getElementById('giatri1').value)
+    const giatri2 = parseInt(document.getElementById('giatri2').value)
+    let ketqua = giatri1 * giatri2;
+    document.getElementById('ketqua').innerHTML = ketqua;
+  }
+  function dauChia() {
+    const giatri1 = parseInt(document.getElementById('giatri1').value)
+    const giatri2 = parseInt(document.getElementById('giatri2').value)
+    let ketqua = giatri1 / giatri2;
+    document.getElementById('ketqua').innerHTML = ketqua;
+  }
+
+</script>
+</body>
+</html>

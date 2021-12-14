@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>chuyển đổi tiền tệ</title>
+</head>
+
+<body>
+  <for>
+    <table>
+      <tr>
+        <td>
+          <p>
+            Amount
+          </p>
+        </td>
+        <td>
+          <p>
+            From Currency
+          </p>
+        </td>
+        <td>
+          <p>
+            To Currency
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="number" id="giatri">
+        </td>
+        <td>
+          <select name="" id="fromcur">
+            <option value="vn">VietNam</option>
+            <option value="usd">USD</option>
+          </select>
+        </td>
+        <td>
+          <select id="tocur">
+            <option>USD</option>
+            <option>VietNam</option>
+          </select>
+        </td>
+        <td>
+          <button type="submit" onclick="sm()">convert</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <P id="result">
+            result:
+          </P>
+        </td>
+      </tr>
+    </table>
+  </for>
+
+</body>
+<script>
+  function sm() {
+    let amount = document.getElementById("giatri").value;
+    let fromCurrency = document.getElementById("fromcur").value;
+    let toCurrency = document.getElementById("tocur").value;
+    if (fromCurrency === toCurrency) {
+      let result = amount;
+      document.getElementById("result").innerHTML = "convert:" + result;
+    } else if (fromCurrency === "vn") {
+      let result = amount / 23000;
+      document.getElementById("result").innerHTML = "convert:" + result;
+    } else {
+      let result = amount * 23000;
+      document.getElementById("result").innerHTML = "convert:" + result;
+    }
+  }
+</script>
+
+</html>
