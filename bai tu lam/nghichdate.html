@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>chuyển đổi tiền tệ</title>
+</head>
+<body>
+<h2>Bài tập JavaScript số 5</h2>
+<div id="hienthi">hien thi</div>
+nhap so tu 0 den 24<input id="nhapvao" type="number">
+<button type="submit" onclick="guidi()">sumit</button><br>
+and now is <div id="dongho"></div>
+
+<script>
+    var date = new Date();
+    var date = date.getHours();
+    console.log(date)
+    var dongHo = document.getElementById('dongho').innerHTML= (date = (date >= 12) ? Date + " PM" : date + " AM");
+
+    function guidi(){
+        var input = document.getElementById('nhapvao').value;
+   
+    if (input < 12 ){
+        var screen = document.getElementById('hienthi').innerHTML = 'day la buoi sang';
+    } else if (input <= 18) {
+        var screen = document.getElementById('hienthi').innerHTML = 'day la buoi chieu';
+    } else if (input <= 24){
+        var screen = document.getElementById('hienthi').innerHTML = 'day la buoi toi';
+    } else {
+        var screen = document.getElementById('hienthi').innerHTML = 'ngoai tinh toan';
+    }
+    }
+ 
+</script>
+
+</body>
+</html>
