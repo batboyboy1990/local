@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>may tinh don gian</title>
+</head>
+<body>
+  <p> toán đơn giản </p>
+<table border="1">
+  <tr>
+    <td>
+      Câu hỏi
+    </td>
+    <td>
+      Trả lời
+    </td>
+    <td>
+      Gửi bài
+    </td>
+    <td>
+      Đáp án
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Nhập số không vào trả lời
+    </td>
+    <td>
+      <input id="vao_1" type="text">
+    </td>
+    <td>
+      <input type="button" onclick="guibai_1()" value="gửi" />
+    </td>
+    <td>
+      <div id="dapAn_1"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      5 + 5 = mấy nhỉ?
+    </td>
+    <td>
+      <input id="vao_2" type="text">
+    </td>
+    <td>
+      <input type="button" onclick="guibai_2()" value="gửi" />
+    </td>
+    <td>
+      <div id="dapAn_2"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      5 + 5 = mấy nhỉ?
+    </td>
+    <td>
+      <input id="vao_3" type="text">
+    </td>
+    <td>
+      <input type="button" onclick="guibai_3()" value="gửi" />
+    </td>
+    <td>
+      <div id="dapAn_3"></div>
+    </td>
+  </tr>
+</table>
+
+
+    <script>
+      function guibai_1(){
+        var inPut1 = document.getElementById('vao_1').value;
+        var outPut1 = document.getElementById('dapAn_1').value;
+        const bai1 = ["so0", "sokhac"];
+        let a = bai1[input];
+        switch (a){
+            case "so0":
+                document.getElementById('dapAn_1').innerHTML=('Dung roi');
+                break;
+            default:
+                document.getElementById('dapAn_1').innerHTML=('sai roi');
+                }
+                if (a = 'sokhac'){
+                  throw "aaaa";
+                  }
+                         }
+      function guibai_2(){
+        var inPut2 = document.getElementById('vao_2').value;
+        var outPut2 = document.getElementById('dapAn_2').value;
+        if (inPut2 == '10'){
+          document.getElementById('dapAn_2').innerHTML=('Dung roi');
+        }else{
+          document.getElementById('dapAn_2').innerHTML=('Sai bet');
+        }
+
+      }
+    </script>
+
+
+</body>
+</html>
