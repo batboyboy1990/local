@@ -48,10 +48,10 @@
     var Age = document.getElementById('tuoi');
     var Fullname = Hieu.lastName + ' '+ Hieu.fistName;
   
-
+/*
     if (Hieu.age == 30){
       Age.innerHTML=('30');
-      Name.innerHTML=('Hieu[2]');
+      Name.innerHTML=('30');
     } else if (Hieu.age == 32){
       Age.innerHTML=('32');
       Name.innerHTML=(Fullname);
@@ -59,6 +59,16 @@
       document.write('khong biet');
     }
     console.log(Fullname)
+  */
+    switch (Hieu.age){
+      case 30:
+      Age.innerHTML=('30')
+      Name.innerHTML=('30')
+      break;
+      case 32:
+      Age.innerHTML=('32');
+      Name.innerHTML=(Fullname);
+    }
   </script>
   
   
