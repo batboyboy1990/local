@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    header {
+      background-color: brown;
+      padding-left: 50%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <h1>Bài ôn tập if else tổng hợp</h1>
+  </header>
+  <table border="1">
+    <tr>
+      <td>Tên</td>
+      <td>Tuổi</td>
+      <td>Giới tính</td>
+    </tr>
+    <tr>
+      <td>
+        <p id="ten"></p>
+      </td>
+      <td>
+        <p id="tuoi"></p>
+      </td>
+      <td>
+        <p id="gioitinh"></p>
+      </td>
+    </tr>
+  </table>
+  
+  <script>
+    // tao object
+    const Hieu = {
+      fistName: 'Hiếu',
+      lastName: 'Nguyễn',
+      age: 32,
+      male: true,
+    }
+    //tao bien
+    var Name = document.getElementById('ten');
+    var Age = document.getElementById('tuoi');
+    var Fullname = Hieu.lastName + ' '+ Hieu.fistName;
+  
+
+    if (Hieu.age == 30){
+      Age.innerHTML=('30');
+      Name.innerHTML=('Hieu[2]');
+    } else if (Hieu.age == 32){
+      Age.innerHTML=('32');
+      Name.innerHTML=(Fullname);
+    } else {
+      document.write('khong biet');
+    }
+    console.log(Fullname)
+  </script>
+  
+  
+</body>
+</html>
