@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach</title>
+    <style>
+        .user_item{
+            color: green;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <p>
+            <label for="">ID</label>
+            <input type="number" id="addUserID" value="">
+        </p>
+    </form>
+    <h1>Foreach</h1>
+    <ul id="target"></ul>
+    <script>
+        var users = [
+            {id: 1, name: 'hieu', gender: 1},
+            {id: 2, name: 'hieu2', gender: 2},
+            {id: 3, name: 'hieu3', gender: 1},
+            {id: 4, name: 'hieu4', gender: 2},
+            {id: 5, name: 'hieu5', gender: 1},
+        ];
+
+        var target = document.querySelector('#target');
+        users.map(function(item){
+            var tagLi = document.createElement('li');
+            tagLi.setAttribute('class', 'user_item');
+            tagLi.innerText = `${item.id} - ${item.name} - ${item.gender === 1 ? 'male' : 'female'}`;
+            target.appendChild(tagLi);
+    });
+     
+    </script>
+    
+</body>
+</html>

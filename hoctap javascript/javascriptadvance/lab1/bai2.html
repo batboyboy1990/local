@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>su kien onkeyup</title>
+    <style>
+        #doituong1{
+            border: 1px solid #000;
+            min-height: 300px;
+        }
+        .title{
+            color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>One Key up</h1>
+    <input type="text" id="txtinput" value="FpolyDN">
+    <h3>Input text</h3>
+    <br>
+    <div id="target2"></div>
+    <script>
+        var h3 = document.querySelector('h3');
+        var txtinput = document.querySelector('#txtinput');
+        txtinput.onkeyup = function(){
+            h3.innerText = txtinput.value;
+        }
+        // phan 2
+        var elTarget = document.querySelector('#target2');
+        var h2 = document.createElement('h2');
+        h2.innerText = "hellooooooo";
+        h2.setAttribute('class', 'title');
+        elTarget.appendChild(h2);
+
+    </script>
+</body>
+</html>
